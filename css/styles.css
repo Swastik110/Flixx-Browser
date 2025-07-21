@@ -91,9 +91,12 @@ body {
 
 /* Card Grid */
 .card-grid {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
+  justify-content: start;
+  width: auto;
+  max-width: 100%; /* prevent overflow */
 }
 
 /* Movie/TV Card */
@@ -107,6 +110,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative; /* Needed for wishlist button positioning */
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .card:hover {
