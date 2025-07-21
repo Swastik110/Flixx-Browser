@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flixx - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo"><strong>🎬 Flixx</strong></h1>
+    
+    <!-- Wishlist button -->
+    <a href="wishlist.html" id="wishlist-link" title="View Wishlist" aria-label="View Wishlist" class="wishlist-link">
+      ❤️ Wishlist
+    </a>
+    
+    <form id="search-form" class="search-form">
+      <input type="text" id="search-input" placeholder="Search movies or TV shows..." />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+     <section id="search-results-section" class="content-section hidden">
+      <h2>🔍 Search Results</h2>
+      <div id="search-results-container" class="card-grid"></div>
+    </section>
+
+    <div id="filter-bar" class="filter-bar">
+      <select id="type-filter">
+        <option value="">All Types</option>
+        <option value="movie">Movies</option>
+        <option value="tv">TV Shows</option>
+      </select>
+
+      <select id="sort-filter">
+        <option value="">Sort By Rating</option>
+        <option value="desc">Highest Rated</option>
+        <option value="asc">Lowest Rated</option>
+      </select>
+
+      <select id="genre-filter">
+        <option value="">All Genres</option>
+        <!-- Dynamic genre options will be added here -->
+      </select>
+
+      <select id="year-filter">
+        <option value="">All Years</option>
+        <!-- We'll populate recent years with JavaScript -->
+      </select>
+    </div>
+
+    <section id="trending-section" class="content-section">
+      <h2>🔥 Trending Now</h2>
+      <div id="trending-container" class="card-grid"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

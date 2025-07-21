@@ -1,0 +1,16 @@
+/* wishliststyle.css */
+
+/* Fix single card stretching issue in wishlist */
+.card-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  justify-content: start;
+  width: auto;
+  max-width: 100%; /* prevent overflow */
+}
+
+.card {
+  max-width: 200px; /* optional to keep cards from getting too wide */
+  margin: 0 auto; /* centers single card nicely */
+}
